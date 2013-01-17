@@ -1,15 +1,15 @@
 Development setup
 =================
 
-To create a buildout,
+No buildout. Just setup.py
 
-  $ python bootstrap.py
-  $ bin/buildout
+  $ python setup.py develop
+  $ pywhmcs --help
 
 Release HOWTO
 =============
 
-To make a release, 
+To make a release,
 
   1) Update release date/version in NEWS.txt and setup.py
   2) Run 'python setup.py sdist'
