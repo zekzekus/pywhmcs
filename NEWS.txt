@@ -1,6 +1,13 @@
 News
 ====
 
+0.0.3
+-----
+
+*Release date: UNRELEASED*
+
+* pypi classifiers added to setup.py
+
 0.0.2
 -----
 
