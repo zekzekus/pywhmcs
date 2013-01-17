@@ -8,3 +8,4 @@ News
 
 * CLI interface prepared.
 * CLI parameter format and model implemented.
+* invoke function implemented. now tool can make any kind of API call to WHMCS
