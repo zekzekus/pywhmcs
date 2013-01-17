@@ -10,6 +10,7 @@ version = '0.0.1'
 
 install_requires = [
     'requests',
+    'simplejson',
     # List your project dependencies here.
     # For more details, see:
     # http://packages.python.org/distribute/setuptools.html#declaring-dependencies

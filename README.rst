@@ -13,19 +13,20 @@ Installation
 Very simple process::
 
   $ git clone git://github.com/zekzekus/pywhmcs.git
-  $ python setup install
+  $ cd pywhmcs
+  $ python setup.py install
 
-And it is ready to use as a CLI script called **pywhmcs**! 
+And it is ready to use as a CLI script called **pywhmcs**!
 
 Usage
 ---------------------------
 CLI program includes usage information. The standart help output is::
-    
+
     $ pywhmcs --help
     usage: pywhmcs [-h] [--verbose] --url URL --username USERNAME --password PASSWORD --action ACTION [--params ...]
-  
+
     pyWHMCS Client Comman Line Interface
-  
+
     optional arguments:
     -h, --help            show this help message and exit
     --verbose             Activate verbose output
@@ -37,7 +38,7 @@ CLI program includes usage information. The standart help output is::
 
 If you want to take the list of clients you have to make a POST request to the WHMCS API endpoint with POST body includes action="getclients" and necessary credidentials. For example::
 
-  $ pywhmcs --url http://yourdomain.com/includes/api.php --username apiuser --password pass --action getclients       
+  $ pywhmcs --url http://yourdomain.com/includes/api.php --username apiuser --password pass --action getclients
 
 The output will be like::
 
@@ -64,7 +65,7 @@ The output will be like::
 
 For actions that requires extra arguments like clientid, userid etc. you must use optional --params parameter. After --params you must give your params in a format of paramN=valueN. These parameters and values will be appended to the POST body as key value pairs and send with the request. For example::
 
-  $ pywhmcs --url http://yourdomain.com/includes/api.php --username apiuser --password pass --action addclientnote --params userid=1 notes="this is a note"                                                
+  $ pywhmcs --url http://yourdomain.com/includes/api.php --username apiuser --password pass --action addclientnote --params userid=1 notes="this is a note"
   {
     "result": "success",
     "noteid": 4
@@ -79,7 +80,7 @@ Also you can install this library on python path and import the invoke function 
 TODO
 ---------------------------
 - For now just JSON response type implemented. WHMCS API supports XML format and a simple key value format. These formats will be supported via parameters.
-- 
+-
 
 Development
 ---------------------------
@@ -89,7 +90,7 @@ For now library needs only one external dependency: `requests HTTP client librar
   $ cd pywhmcs
   $ python setup.py develop
 
-These commands will clone the repository and fetch all dependencies and install to your system. 
+These commands will clone the repository and fetch all dependencies and install to your system.
 
 .. _`requests HTTP client library`: http://docs.python-requests.org/en/latest/
 
