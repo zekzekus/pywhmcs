@@ -4,7 +4,7 @@ News
 0.0.1
 -----
 
-*Release date: UNRELEASED*
+*Release date: 17.01.2013*
 
 * CLI interface prepared.
 * CLI parameter format and model implemented.
