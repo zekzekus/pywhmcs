@@ -5,7 +5,7 @@ import logging as log
 from whmcs import invoke
 
 
-parser = argparse.ArgumentParser(description="pyWHMCS Client Comman Line Interface")
+parser = argparse.ArgumentParser(description="pyWHMCS Client Command Line Interface")
 parser.add_argument("--verbose", action="store_true", help="Activate verbose output")
 parser.add_argument("--url", help="WHMCS API endpoint URL", required=True)
 parser.add_argument("--username", help="Username with API permission", required=True)
