@@ -1,6 +1,13 @@
 News
 ====
 
+0.0.2
+-----
+
+*Release date: 17.01.2012*
+
+* TODO section of README updated
+
 0.0.1
 -----
 

@@ -80,7 +80,8 @@ Also you can install this library on python path and import the invoke function 
 TODO
 ---------------------------
 - For now just JSON response type implemented. WHMCS API supports XML format and a simple key value format. These formats will be supported via parameters.
--
+- Create action classes to manage API interface completely. Classes may now about action parameters, required data etc.
+- Implement file upload infrastructure for actions may need uploading files.
 
 Development
 ---------------------------
