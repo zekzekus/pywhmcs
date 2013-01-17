@@ -94,3 +94,8 @@ These commands will clone the repository and fetch all dependencies and install 
 
 .. _`requests HTTP client library`: http://docs.python-requests.org/en/latest/
 
+Troubleshoot
+---------------------------
+- The user you give as --username parameter must have "API Permission". You or the administrator of the WHMCS system must grant this permission to your user.
+- WHMCS system allows only specified set of IP addresses to make API requests for security reasons. So, your IP address must be added to permitted IP addresses list in WHMCS system.
+
