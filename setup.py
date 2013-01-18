@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
-import sys, os
+import sys
+import os
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
@@ -10,14 +11,11 @@ version = '0.0.2'
 
 install_requires = [
     'requests',
-    'simplejson',
-    # List your project dependencies here.
-    # For more details, see:
-    # http://packages.python.org/distribute/setuptools.html#declaring-dependencies
 ]
 
 
-setup(name='pywhmcs',
+setup(
+    name='pywhmcs',
     version=version,
     description="WHMCS Client Library",
     long_description=README + '\n\n' + NEWS,
@@ -41,7 +39,7 @@ setup(name='pywhmcs',
     url='https://github.com/zekzekus/pywhmcs',
     license='Gnu General Public License v3',
     packages=find_packages('src'),
-    package_dir = {'': 'src'},include_package_data=True,
+    package_dir={'': 'src'}, include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
     entry_points={

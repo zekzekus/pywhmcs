@@ -3,20 +3,20 @@
 import logging as log
 import requests
 import hashlib
-import simplejson as json
 
 
-def invoke(url, username, password, action, parameters):
-    headers = {'content-type': 'application/json'}
+def invoke(url, username, password, action, format, parameters):
+    content_type = "application/%s" % format
+    headers = {'content-type': content_type}
 
     payload = {
         'username': username,
         'password': hashlib.md5(password).hexdigest(),
-        'responsetype': 'json',
+        'responsetype': format,
         'action': action}
     payload.update(parameters)
     log.debug("PAYLOAD: %s" % payload)
 
     r = requests.post(url, data=payload)
-    print "%s" % json.dumps(r.json(), sort_keys = False, indent = 4)
+    print "%s" % r.text
     return (r.status_code, r.text)
