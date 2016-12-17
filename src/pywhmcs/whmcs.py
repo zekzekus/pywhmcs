@@ -12,6 +12,7 @@ def invoke(url, username, password, action, format, parameters):
     payload = {
         'username': username,
         'password': hashlib.md5(password).hexdigest(),
+        'accesskey': accesskey,
         'responsetype': format,
         'action': action}
     payload.update(parameters)
