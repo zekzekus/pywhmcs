@@ -16,6 +16,7 @@ def main():
                         help="Username with API permission",
                         required=True)
     parser.add_argument("--password", help="API user password", required=True)
+    parser.add_argument("--accesskey", help="API accesskey", required=True)
     parser.add_argument("--action", help="Action to invoke", required=True)
     parser.add_argument(
         "--params",
@@ -50,6 +51,7 @@ def main():
     invoke(args.url,
            args.username,
            args.password,
+           args.accesskey,
            args.action,
            args.format,
            params_dict)
